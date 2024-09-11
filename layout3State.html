@@ -4,61 +4,34 @@
         <title>Layout 3</title>
         <script>
 
+            var menuState = "open";
+
+            function changeMenu() {
+                if (menuState == "open") {
+                    closeMenu();
+                    menuState = "closed";
+                }
+                else if (menuState == "closed") {
+                    openMenu();
+                    menuState = "open";
+                }
+
+            }
+
             function closeMenu() {
                 document.querySelector("nav").style.marginLeft = "-320px";
                 document.querySelector("main").style.marginLeft = "40px";
-                document.querySelector("#menuopen").style.display = "block";
-                document.querySelector("#menuclose").style.display = "none";
             }
 
             function openMenu() {
                 document.querySelector("nav").style.marginLeft = "0px";
-                document.querySelector("main").style.marginLeft = "360px";  
-                document.querySelector("#menuopen").style.display = "none";
-                document.querySelector("#menuclose").style.display = "block";              
+                document.querySelector("main").style.marginLeft = "360px";                
             }
 
 
         </script>
 
         <style>
-
-            @media only screen and (max-width: 600px) {
-                nav {
-                    margin-left: -310px;
-                }
-
-                main {
-                    margin-left: 40px;
-                }
-
-                #menuopen {
-                    display: block;
-                }
-
-                #menuclose {
-                    display: none;
-                }
-            }
-
-            @media only screen and (min-width: 601px) {
-                nav {
-                    margin-left: 0px;
-                }
-
-                main {
-                    margin-left: 360px;
-                }
-
-                #menuopen {
-                    display: none;
-                }
-
-                #menuclose {
-                    display: block;
-                }
-            }
-
             nav {
                 width: 350px;
                 height: 100%;
@@ -70,16 +43,16 @@
                 flex-direction: column;
                 align-items: center;
                 padding-top: 50px;
+                margin-left: 0px;
                 transition: margin-left 0.5s;
             }
 
-            .menubtn {
+            #menubtn {
                 width: 20px;
                 position:absolute;
                 top:5px;
                 right: 5px;
             }
-
 
             nav > a {
                 color:#ffffff;
@@ -88,6 +61,7 @@
             }
 
             main {
+                margin-left: 360px;
                 display: flex;
                 flex-wrap: wrap;
                 transition: margin-left 0.5s;
@@ -117,8 +91,7 @@
     </head>
     <body>
         <nav>
-            <img onclick="openMenu()" id="menuopen" class="menubtn" src="m2i8G6G6b1m2A0G6.png">
-            <img onclick="closeMenu()" id="menuclose" class="menubtn" src="m2i8G6G6b1m2A0G6.png">
+            <img onclick="changeMenu()" id="menubtn" src="m2i8G6G6b1m2A0G6.png">
             <a href="">Länk 1</a>
             <a href="">Länk 2</a>
             <a href="">Länk 3</a>
