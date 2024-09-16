@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Layout 3</title>
+        <script>
+            function closeMenu() {
+                document.querySelector("nav").style.marginLeft = "-270px";
+                document.querySelector("#closemenu").style.display = "none";
+                document.querySelector("#openmenu").style.display = "inline";
+            }
+
+            function openMenu() {
+                document.querySelector("nav").style.marginLeft = "0px";
+            }
+        </script>
+        <style>
+            nav {
+                position:fixed;
+                top: 0px;
+                left: 0px;
+                height: 100%;
+                width: 300px;
+                background-color: brown;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top:30px;
+                transition: margin-left 0.5s;
+            }
+
+            nav > a {
+                color:#ffffff;
+                text-decoration: none;
+                font-size:14pt;
+            }
+
+            #closemenu, #openmenu {
+                width:20px;
+                position: absolute;
+                top: 5px;
+                right:5px;
+                cursor:pointer;
+            }
+
+            #openmenu {
+                display:none;
+            }
+
+            main {
+                margin-left:300px;
+                display:flex;
+                flex-wrap: wrap;
+            }
+
+            div.card {
+                width:200px;
+                height: 250px;
+                overflow: hidden;
+                /* border: 1px solid #cdcdcd; */
+                filter:drop-shadow(0px 0px 3px #cdcdcd);
+                background-color: #ffffff;
+                margin: 5px;
+            }
+
+            div.card > h1 {
+                font-size:12pt;
+            }
+
+            div.card > img {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <img id="closemenu" src="m2i8G6G6b1m2A0G6.png" onclick="closeMenu()">
+            <img id="openmenu" src="m2i8G6G6b1m2A0G6.png" onclick="openMenu()">
+            <a href="">Knapp 1</a>
+            <a href="">Knapp 2</a>
+            <a href="">Knapp 3</a>
+        </nav>
+        <main>
+
+            <div class="card">
+                <h1>Produktnamn</h1>
+                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
+                <p>Produktbeskrivning</p>
+            </div>
+
+            <div class="card">
+                <h1>Produktnamn</h1>
+                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
+                <p>Produktbeskrivning</p>
+            </div>
+            
+            <div class="card">
+                <h1>Produktnamn</h1>
+                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
+                <p>Produktbeskrivning</p>
+            </div>
+            
+            <div class="card">
+                <h1>Produktnamn</h1>
+                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
+                <p>Produktbeskrivning</p>
+            </div>
+            
+            <div class="card">
+                <h1>Produktnamn</h1>
+                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
+                <p>Produktbeskrivning</p>
+            </div>
+            
+            <div class="card">
+                <h1>Produktnamn</h1>
+                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
+                <p>Produktbeskrivning</p>
+            </div>
+            
+            <div class="card">
+                <h1>Produktnamn</h1>
+                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
+                <p>Produktbeskrivning</p>
+            </div>
+            
+            <div class="card">
+                <h1>Produktnamn</h1>
+                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
+                <p>Produktbeskrivning</p>
+            </div>
+            
+            <div class="card">
+                <h1>Produktnamn</h1>
+                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
+                <p>Produktbeskrivning</p>
+            </div>
+            
+            <div class="card">
+                <h1>Produktnamn</h1>
+                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
+                <p>Produktbeskrivning</p>
+            </div>
+            
+            <div class="card">
+                <h1>Produktnamn</h1>
+                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
+                <p>Produktbeskrivning</p>
+            </div>
+            
+            <div class="card">
+                <h1>Produktnamn</h1>
+                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
+                <p>Produktbeskrivning</p>
+            </div>
+            
+            <div class="card">
+                <h1>Produktnamn</h1>
+                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
+                <p>Produktbeskrivning</p>
+            </div>
+        </main>
+    </body>
+</html>
