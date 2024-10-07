@@ -4,77 +4,82 @@
         <title>Layout 3</title>
         <script>
             function closeMenu() {
-                document.querySelector("nav").style.marginLeft = "-270px";
-                document.querySelector("#closemenu").style.display = "none";
-                document.querySelector("#openmenu").style.display = "inline";
+                document.querySelector("nav").style.left = "-270px";
+                document.querySelector("main").style.marginLeft = "30px";
+                document.querySelector("#closebtn").style.display = "none";
+                document.querySelector("#openbtn").style.display = "inline";
             }
 
             function openMenu() {
-                document.querySelector("nav").style.marginLeft = "0px";
+                document.querySelector("nav").style.left = "-270px";
+                document.querySelector("main").style.marginLeft = "30px";
+                document.querySelector("#closebtn").style.display = "none";
+                document.querySelector("#openbtn").style.display = "inline";
             }
         </script>
         <style>
             nav {
                 position:fixed;
-                top: 0px;
                 left: 0px;
+                top: 0px;
                 height: 100%;
-                width: 300px;
-                background-color: brown;
+                width:300px;
+                background-color: #000000;
                 display:flex;
                 flex-direction: column;
                 align-items: center;
-                padding-top:30px;
-                transition: margin-left 0.5s;
+                padding-top: 30px;
+                transition: left 0.5s;
+            }
+
+            #closebtn, #openbtn {
+                width:20px;
+                position:absolute;
+                top: 5px;
+                right: 5px;
+                cursor: pointer;
+            }
+
+            #openbtn {
+                display: none;
             }
 
             nav > a {
-                color:#ffffff;
+                color: #ffffff;
                 text-decoration: none;
                 font-size:14pt;
             }
 
-            #closemenu, #openmenu {
-                width:20px;
-                position: absolute;
-                top: 5px;
-                right:5px;
-                cursor:pointer;
-            }
-
-            #openmenu {
-                display:none;
-            }
-
             main {
-                margin-left:300px;
+                margin-left: 300px;
                 display:flex;
-                flex-wrap: wrap;
+                flex-wrap:wrap;
+                transition: margin-left 0.5s;
             }
 
             div.card {
                 width:200px;
                 height: 250px;
                 overflow: hidden;
-                /* border: 1px solid #cdcdcd; */
-                filter:drop-shadow(0px 0px 3px #cdcdcd);
                 background-color: #ffffff;
-                margin: 5px;
+                border: 1px solid #cdcdcd;
+                margin:10px;
+                cursor: pointer;
+            }
+
+            div.card > img {
+                width:100%;
             }
 
             div.card > h1 {
                 font-size:12pt;
             }
-
-            div.card > img {
-                width: 100%;
-            }
         </style>
     </head>
     <body>
         <nav>
-            <img id="closemenu" src="m2i8G6G6b1m2A0G6.png" onclick="closeMenu()">
-            <img id="openmenu" src="m2i8G6G6b1m2A0G6.png" onclick="openMenu()">
+            <img id="closebtn" onclick="closeMenu()" src="m2i8G6G6b1m2A0G6.png">
+            <img id="openbtn" onclick="openMenu()" src="m2i8G6G6b1m2A0G6.png">
             <a href="">Knapp 1</a>
             <a href="">Knapp 2</a>
             <a href="">Knapp 3</a>
@@ -83,81 +88,95 @@
 
             <div class="card">
                 <h1>Produktnamn</h1>
-                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
-                <p>Produktbeskrivning</p>
+                <img src="https://img.eurotoys.dk/pic/webp/177-0e6596_680.webp">
             </div>
 
             <div class="card">
                 <h1>Produktnamn</h1>
-                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
-                <p>Produktbeskrivning</p>
+                <img src="https://img.eurotoys.dk/pic/webp/177-0e6596_680.webp">
             </div>
-            
+
             <div class="card">
                 <h1>Produktnamn</h1>
-                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
-                <p>Produktbeskrivning</p>
+                <img src="https://img.eurotoys.dk/pic/webp/177-0e6596_680.webp">
             </div>
-            
+
             <div class="card">
                 <h1>Produktnamn</h1>
-                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
-                <p>Produktbeskrivning</p>
+                <img src="https://img.eurotoys.dk/pic/webp/177-0e6596_680.webp">
             </div>
-            
+
+
             <div class="card">
                 <h1>Produktnamn</h1>
-                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
-                <p>Produktbeskrivning</p>
+                <img src="https://img.eurotoys.dk/pic/webp/177-0e6596_680.webp">
             </div>
-            
+
             <div class="card">
                 <h1>Produktnamn</h1>
-                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
-                <p>Produktbeskrivning</p>
+                <img src="https://img.eurotoys.dk/pic/webp/177-0e6596_680.webp">
             </div>
-            
+
             <div class="card">
                 <h1>Produktnamn</h1>
-                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
-                <p>Produktbeskrivning</p>
+                <img src="https://img.eurotoys.dk/pic/webp/177-0e6596_680.webp">
             </div>
-            
+
             <div class="card">
                 <h1>Produktnamn</h1>
-                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
-                <p>Produktbeskrivning</p>
+                <img src="https://img.eurotoys.dk/pic/webp/177-0e6596_680.webp">
             </div>
-            
+
             <div class="card">
                 <h1>Produktnamn</h1>
-                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
-                <p>Produktbeskrivning</p>
+                <img src="https://img.eurotoys.dk/pic/webp/177-0e6596_680.webp">
             </div>
-            
+
             <div class="card">
                 <h1>Produktnamn</h1>
-                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
-                <p>Produktbeskrivning</p>
+                <img src="https://img.eurotoys.dk/pic/webp/177-0e6596_680.webp">
             </div>
-            
+
             <div class="card">
                 <h1>Produktnamn</h1>
-                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
-                <p>Produktbeskrivning</p>
+                <img src="https://img.eurotoys.dk/pic/webp/177-0e6596_680.webp">
             </div>
-            
+
             <div class="card">
                 <h1>Produktnamn</h1>
-                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
-                <p>Produktbeskrivning</p>
+                <img src="https://img.eurotoys.dk/pic/webp/177-0e6596_680.webp">
             </div>
-            
+
             <div class="card">
                 <h1>Produktnamn</h1>
-                <img src="https://www.jmldirect.com/media/catalog/product/cache/8a9f58d1ff4a37cbd029c7fba2ca69d1/p/n/pnp_08_1.webp">
-                <p>Produktbeskrivning</p>
+                <img src="https://img.eurotoys.dk/pic/webp/177-0e6596_680.webp">
             </div>
+
+            <div class="card">
+                <h1>Produktnamn</h1>
+                <img src="https://img.eurotoys.dk/pic/webp/177-0e6596_680.webp">
+            </div>
+
+            <div class="card">
+                <h1>Produktnamn</h1>
+                <img src="https://img.eurotoys.dk/pic/webp/177-0e6596_680.webp">
+            </div>
+
+            <div class="card">
+                <h1>Produktnamn</h1>
+                <img src="https://img.eurotoys.dk/pic/webp/177-0e6596_680.webp">
+            </div>
+
+            <div class="card">
+                <h1>Produktnamn</h1>
+                <img src="https://img.eurotoys.dk/pic/webp/177-0e6596_680.webp">
+            </div>
+
+            <div class="card">
+                <h1>Produktnamn</h1>
+                <img src="https://img.eurotoys.dk/pic/webp/177-0e6596_680.webp">
+            </div>
+
         </main>
     </body>
 </html>
